@@ -1,10 +1,11 @@
 arr = [1, 2, 3, 1]
+
 seen = set()
-for num in arr:
-    if num in seen:
+
+for i in arr:
+    if i in seen:
         print(True)
         break
-
-    seen.add(num)
+    seen.add(i)
 else:
     print(False)
