@@ -1,5 +1,5 @@
 class Student:
-    def __init__(self, n:str, a:int, g:str):
+    def __init__(self, n:str, a:int, g:str) -> None:
         self.name = n
         self.age = a
         self. gender = g
