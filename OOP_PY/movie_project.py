@@ -41,7 +41,7 @@ class Movie:
         print(f"The seats available for the movie is {seat_available}")
         print(f"The seats booked so far for the movie is {self.booked_seats}\n")
 
-m1 = Movie("Kargil", 100, 200)
+m1 = Movie("Kargil", 100, 499)
 
 m1.show_status()
 m1.book_ticket(70)
