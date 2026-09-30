@@ -1,12 +1,11 @@
 class Student:
-    def __init__(self, n:str, a:int, g:str) -> None:
-        self.name = n
-        self.age = a
-        self.gender = g
+    def __init__(self, n, a, g):
+        self.a = a
+        self.n = n
+        self.g = g
 
-    def display(self) -> None:
-        print("Hi!\n")
-        print(f"My name is {self.name}, I am {self.age}yr. old and I am a {self.gender}")
+    def displey(self):
+        print(f"Hey there! My name is {self.n}, I am {self.a}yr old and I am a {self.g} cnadidate.")
 
-s1 = Student("Akash",21,"Male")
-s1.display()
+s1 = Student("Akash", 21, "Male")
+s1.displey()
