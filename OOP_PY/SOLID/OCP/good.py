@@ -1,31 +1,35 @@
-class User:
-    def __init__(self, name, email):
-        self.name = name
-        self.email = email
+# We can use inheritance and method overriding to add new payment methods without modifying the existing payment classes.
 
-    def display_user(self):
-        print(self.name, self.email)
+class Payment:
+    def pay(self, amount):
+        pass
 
+class CreditCard(Payment):
+    def pay(self, amount):
+        print("Paid", amount, "using Credit Card")
 
-class UserRepository:
-    def save_to_database(self, user):
-        print("Saving user to database...")
-
-
-class EmailService:
-    def send_email(self, user):
-        print("Sending email to", user.email)
+class UPI(Payment):
+    def pay(self, amount):
+        print("Paid", amount, "using UPI")
 
 
-# Creating objects
-user = User("Akash", "akash@gmail.com")
+class PayPal(Payment):
+    def pay(self, amount):
+        print("Paid", amount, "using PayPal")
 
-repository = UserRepository()
-email_service = EmailService()
+p1 = CreditCard()
+p2 = UPI()
+p3 = PayPal()
 
-user.display_user()
-repository.save_to_database(user)
-email_service.send_email(user)
+p1.pay(1000)
+p2.pay(2000)
+p3.pay(3000)
 
+"""
+Why is this good?
+---> Suppose we want to add a new payment method, such as Net Banking.
+We can simply create a new class.
 
-# Each class has a distinct responsibility. If the email implementation changes, you can modify EmailService without changing User.
+That's it! We don't need to modify the existing CreditCard, UPI, or PayPal classes.
+We extend the system by adding a new class instead of changing existing payment classes.
+"""
