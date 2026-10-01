@@ -49,3 +49,16 @@
 
 # print("Program ended")
 
+#--------------------lambda--------------------#
+
+# Normal function
+def sq(n):
+    return n * n
+print(sq(5))
+
+# lambda function
+sq = lambda n: n*n
+print(sq(6))
+
+add = lambda a, b: a*b
+print(add(9,9))
