@@ -14,4 +14,4 @@ class Document:
 
 class History:
     def __init__(self):
-            self.snapshots = [] 
+            self.snapshots = []
